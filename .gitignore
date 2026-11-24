@@ -1,0 +1,31 @@
+# deps
+node_modules/
+.pnp.*
+# builds
+dist/
+build/
+*.tsbuildinfo
+# runtime data
+data/
+*.sqlite
+*.sqlite-journal
+*.db
+screenshots/
+captures/
+logs/
+*.log
+# env & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+# os
+.DS_Store
+Thumbs.db
+# editor
+.vscode/
+.idea/
+# agent packaging
+packages/agent-desktop/release/

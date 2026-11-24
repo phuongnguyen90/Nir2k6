@@ -1,0 +1,28 @@
+{
+  "name": "hearth-parental-guard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hearth - self-hostable parental device management (computer, tablet, phone): web/app filtering, time locks, screen capture, content alerts.",
+  "license": "SEE docs/LEGAL-ETHICS.md",
+  "workspaces": [
+    "packages/shared",
+    "packages/server",
+    "packages/dashboard",
+    "packages/agent-desktop"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build -w @hearth/shared && npm run build -w @hearth/server && npm run build -w @hearth/agent-desktop && npm run build -w @hearth/dashboard",
+    "typecheck": "npm run -ws --if-present typecheck",
+    "test": "npm run -ws --if-present test",
+    "dev:server": "npm run dev -w @hearth/server",
+    "dev:dashboard": "npm run dev -w @hearth/dashboard",
+    "dev:agent": "npm run dev -w @hearth/agent-desktop"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^22.9.0"
+  }
+}
